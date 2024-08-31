@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    display: grid;
+    width: 100vw;
+    height: 190vh;
+    grid-template-areas:
+    "profile-section"
+    "padre1"
+        ;
+        justify-content: center
+}
+
+
+.padre1 {
+    background-color: blue;
+    width: 100%;
+    height: 100vh;
+    border: solid white;
+    grid-area: padre1;
+    display: grid;
+    grid-template-areas:
+        "hijo1"
+        "hijo2";
+
+}
+
+.hijo1 {
+    background-color: rgb(246, 221, 250);
+    grid-area: hijo1;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: 10px;
+    grid-template-areas:
+        "titulo"
+        "descripcion";
+    margin: top 10px;
+}
+
+
+.titulo {
+    width: 100%;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.descripcion {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.hijo2 {
+    background-color: rgb(246, 221, 250);
+    border: solid white;
+    grid-area: hijo2;
+    display: grid;
+    grid-template-areas:
+        "apartado1"
+        "apartado2"
+        "apartado3"
+        "apartado4";
+    gap: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+text-align: center;
+font-weight: bold;
+}
+
+.apartado1,
+.apartado2,
+.apartado3,
+.apartado4 {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.apartado1 img,
+.apartado2 img,
+.apartado3 img,
+.apartado4 img {
+    width: 80%;
+    height: auto;
+}
+
+.menu {
+    background-color: rgb(222, 153, 231);
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 20px;
+    align-items: center;
+}
+
+#imgm {
+    width: 15%;
+    height: auto;
+}
+
+.titulom {
+    color: rgb(0, 0, 0);
+}
+
+.titulom::first-letter {
+    font-size: 50px;
+    color: rgb(92, 4, 104);
+}
+.container {
+   display: grid;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #eae1f0, #674183, #33023f);
+   margin-top: 5px;
+   align-items: center;
+padding-left: 10px;
+padding-block-end: 50px;
+
+}
+
+.FotoPerfil {
+display: flex;
+
+    bottom: -20px;
+    left: -20px;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    border: 8px solid rgb(255, 255, 255);
+    background-image: url('IMG/fotopersonal.jpg');
+    background-size: cover;
+
+   
+}
