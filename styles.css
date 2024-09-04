@@ -1,122 +1,125 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: red;
-    display: grid;
-    width: 100%;
-    height: 1000vh;
-    grid-template-areas:
-        "container"
-        "padre1"
-        "HOBBIES"
-        "Trabajos"
-    ;
-    grid-template-rows: 80vh 240vh 600vh 122vh;
-    grid-template-columns: 100%;
-    justify-content: center
+  background-color: rgb(245, 52, 52);
+  display: grid;
+  width: 100%;
+  height: 1150vh;
+  grid-template-areas:
+    "container"
+    "padre1"
+    "HOBBIES"
+    "Trabajos"
+    "mensaje"
+    "footer";
+  grid-template-rows: 65vh 240vh 650vh 120vh 50vh 45vh;
+  grid-template-columns: 100%;
+  justify-content: center;
 }
+
 .padre1 {
-    background-color: blue;
-    width: 100%;
-    border: solid white;
-    grid-area: padre1;
-    display: grid;
-    grid-template-areas:
-        "hijo1"
-        "hijo2";
+  grid-area: padre1;
+  background-color: blue;
+  width: 100%;
+  border: solid white;
+  grid-area: padre1;
+  display: grid;
+  grid-template-areas:
+    "hijo1"
+    "hijo2";
 }
 
 .hijo1 {
-    background-color: rgb(246, 221, 250);
-    grid-area: hijo1;
-    display: grid;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: 10px;
-    grid-template-areas:
-        "titulo"
-        "descripcion";
-    margin: top 10px;
+  background-color: rgb(220, 223, 248);
+  grid-area: hijo1;
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: 10px;
+  grid-template-areas:
+    "titulo"
+    "descripcion";
+  margin: top 10px;
 }
 
-
 .titulo {
-    width: 100%;
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 10px;
-    font-weight: bold;
+  width: 100%;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .descripcion {
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    font-size: 20px;
-    padding: 10px;
-    box-sizing: border-box;
-    text-align: justify;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  font-size: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: justify;
 }
 
 .hijo2 {
-    background-color: rgb(246, 221, 250);
-    border: solid white;
-    grid-area: hijo2;
-    display: grid;
-    grid-template-areas:
-        "apartado1"
-        "apartado2"
-        "apartado3"
-        "apartado4";
-    gap: 10px;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
-    font-weight: bold;
+  background-color: rgb(220, 223, 248);
+  border: solid white;
+  grid-area: hijo2;
+  display: grid;
+  grid-template-areas:
+    "apartado1"
+    "apartado2"
+    "apartado3"
+    "apartado4";
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .apartado1,
 .apartado2,
 .apartado3,
 .apartado4 {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 15px;
 }
 
 .apartado1 img,
 .apartado2 img,
 .apartado3 img,
 .apartado4 img {
-    width: 80%;
-    height: auto;
+  width: 80%;
+  height: auto;
 }
 
 .menu {
-    background-color:  #004d99;
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 15px;
-    padding-right: 20px;
-    align-items: center;
+  background-color: #004d99;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 20px;
+  align-items: center;
 }
 
 #imgm {
-    width: 15%;
-    height: auto;
+  width: 15%;
+  height: auto;
 }
 
 .titulom {
@@ -125,144 +128,253 @@ body {
 }
 
 .titulom::first-letter {
-    font-size: 50px;
-    color: rgb(92, 4, 104);
+  font-size: 50px;
+  color: rgb(1, 23, 121);
 }
 
 .container {
-    display: flex;
-    background: linear-gradient(135deg, #eae1f0, #674183, #33023f);
-    margin-top: 20px;
-    align-items: center;
-    padding-left: 10px;
-    padding-block-end: 50px;
-
+  grid-area: container;
+  display: flex;
+  background: linear-gradient(135deg, #e5e0ff, #6446b6, #2806a3);
+  margin-top: 20px;
+  align-items: center;
+  padding-left: 10px;
+  padding-block-end: 50px;
 }
 
 .FotoPerfil {
-    display: flex;
-    width: 100vw;
-    height: 100vw;
-    border-radius: 50%;
-    border: 8px solid rgb(255, 255, 255);
-    background-image: url('IMG/fotopersonal.jpg');
-    background-size: cover;
-
-
+  display: flex;
+  width: 100vw;
+  height: 100vw;
+  border-radius: 50%;
+  border: 8px solid rgb(255, 255, 255);
+  background-image: url("IMG/fotopersonal.jpg");
+  background-size: cover;
 }
 
 .HOBBIES {
-    display: grid;
-    grid-template-areas:
-        "hobby"
-         "hobby"
-        ;
-    gap: 20px;
-    padding: 20px;
-    background-color: rgb(246, 221, 250);
-
+  grid-area: HOBBIES;
+  display: grid;
+  grid-template-areas:
+    "hobby"
+    "hobby";
+  gap: 20px;
+  padding: 20px;
+  background-color: rgb(188, 211, 255);
+  text-align: center;
 }
 
 .hobby {
-    background-color: rgb(239, 139, 212);
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
+  grid-area: hobby;
+  background-color: rgb(98, 107, 241);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
 
-    grid-template-areas:
+  grid-template-areas:
     "musica"
-    "juegos " 
-    "infinity war " 
-    ;
-    grid-template-rows: 205vh;
+    "juegos "
+    "Peliculas";
+  grid-template-rows: 205vh;
 }
 
-.musica{
-    background-color:rgb(249, 249, 249);
-
-    gap: 5px;
-    margin-top: 20px;
+.musica {
+  grid-area: musica;
+  display: grid;
+  background-color: rgb(249, 249, 249);
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
 }
-.juegos{
-    background-color: rgb(255, 255, 255);
-    gap: 5px;
-    margin-top: 20px;
-}
-.Peliculas{
-    background-color: rgb(255, 255, 255);
 
-    gap: 5px;
-    margin-top: 20px;
+.musica img {
+  width: 100%;
+  border-radius: 10px;
+}
+.juegos {
+  grid-area: juegos;
+  display: grid;
+  background-color: #f2f2f2;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.juegos h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.juegos img {
+  width: 100%;
+  border-radius: 10px;
+}
+.Peliculas {
+  grid-area: Peliculas;
+  background-color: #e6e6e6;
+
+  grid-gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.Peliculas h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #004d99;
+  text-align: center;
+}
+.Peliculas img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.Peliculas img:hover {
+  transform: scale(1.05);
 }
 
 .hobby h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  background-color: #0e077156;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .hobby img {
-    width: 100%;
-    border-radius: 25px;
-    margin-bottom: 10px;
+  width: 100%;
+  border-radius: 25px;
+  margin-bottom: 10px;
 }
 
 .hobby p {
-    font-size: 16px;
-    color: #333;
+  font-size: 16px;
+  color: #333;
 }
-hr{
-    height: 10px;
-    
-    background-color: rgba(54, 8, 83, 0.662);
-    border: none;
-    margin: 20px 0;
+
+hr {
+  height: 10px;
+
+  background-color: rgba(54, 8, 83, 0.662);
+  border: none;
+  margin: 20px 0;
 }
 
 .Trabajos {
-    display: grid;
-    grid-template-areas:
-        "trabajo"
-         "trabajo"
-        ;
-    gap: 20px;
-    padding: 20px;
-    background-color: #ffffff;
-text-align: center;
-border-radius: 10px;
+    grid-area: Trabajos;
+  display: grid;
+  grid-template-areas:
+    "trabajo"
+    "trabajo";
+  gap: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 10px;
 }
 
 .Trabajos {
-    color: #004d99;
-    margin-bottom: 20px;
+  color: #004d99;
 }
-.trabajo{
-   margin-bottom: 30px;
-    border-radius: 10px;
-    text-align: center;
- 
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 
+.trabajo {
+
+  margin-bottom: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
+
 .trabajo img {
-    width: 100%;
-border-radius: 10px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.trabajo p {
+  margin: 10px 0;
+  text-align: centers;
+  background-color: white;
+  padding: 3px;
+}
+
+.trabajo a {
+  background-color: #06005f;
+  color: white;
+  float: right;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.trabajo a:hover {
+  text-decoration: underline;
+}
+
+.mensaje {
+    grid-area: mensaje;
+  background-color: #004d99;
+  width: 100%;
+  color: white;
+  text-align: center;
+  background-image: url("IMG/alber eistein.jpg");
+  background-size: cover;
+}
+.footer {
+    grid-area: footer;
+  background-color: #1a2238;
+  color: #ffffff;
+  padding: 25px;
+  text-align: center;
 
 }
-.trabajo p{
-margin: 10px 0;
-text-align: centers;
-background-color: white;
-padding: 3px;
+.Fcontainer {
+    grid-area: Fcontainer;
+  display: grid;
+  gap: 20px;
+  margin: 0 auto;
+  grid-template-areas:
+    "redes"
+    "redesIcons"
+    "telefono"
+    "email"
+    "navegacion";
 }
-.trabajo a{
-    background-color: #06005f;
-    color: white;
-float: right;
-border-radius: 5px;
-text-decoration: none;
+.redes h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.redes p {
+  margin: 0;
+  font-size: 16px;
+  color: #ffffff;
+}
+.redesIcons {
+  margin: 0 10px;
+  display: inline-block;
+}
+.redesIcons img {
+  width: 15%;
+  height: 15%;
+}
+.navegacion {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+}
+.navegacion a {
+  margin: 0 15px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 19px;
+  text-align: center;
 
 }
-.trabajo a:hover{
-    text-decoration: underline;
+.navegacion a:hoover {
+  color: #ff6f61;
+}
+.c {
+  padding: 10px;
 }
