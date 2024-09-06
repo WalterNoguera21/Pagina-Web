@@ -5,22 +5,20 @@
   font-family: Arial, sans-serif;
 }
 
-
   body {
     background-color: rgba(245, 52, 52, 0);
     display: grid;
-    min-width: 100%;
+  width: 100%;
     height: auto;
     grid-template-areas:
-      "menu"
-      "container"
-      "padre1"
-      "HOBBIES"
-      "Trabajos"
-      "mensaje"
-      "footer";
-    grid-template-rows: 10vh auto;
-    grid-template-columns: 100%;
+      "menu menu "
+      "padre1 container"
+      "HOBBIES HOBBIES"
+      "trabajos trabajos"
+      "mensaje mensaje"
+      "footer footer";
+    grid-template-rows: 10vh auto auto auto auto ;
+    grid-template-columns: 50% 50%;
     justify-content: center;
   }
 
@@ -115,7 +113,7 @@
   .apartado2 img,
   .apartado3 img,
   .apartado4 img {
-    width: 80%;
+    width:20%;
     height: auto;
   
   }
@@ -124,7 +122,7 @@
     grid-area: menu;
     background-color: #004d99;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 10vh;
     display: flex;
     justify-content: space-between;
@@ -155,10 +153,9 @@
 height: auto;
     display: flex;
     background: linear-gradient(135deg, #e5e0ff, #6446b6, #2806a3);
-    margin-top: 20px;
+
     align-items: center;
-    padding: 10px;
-    padding-block-end: 50px;
+
   }
 
   .FotoPerfil {
@@ -169,7 +166,7 @@ height: auto;
     width: 100%;
     height: auto;
     border-radius: 50%;
-    border: 8px solid rgb(255, 255, 255);
+    border: 10px solid rgb(255, 255, 255);
     background-image: url("IMG/fotopersonal.jpg");
     background-size: cover;
   }
@@ -178,10 +175,7 @@ height: auto;
     display: grid;
     height: auto;
     grid-template-areas:
-      "hobby"
       "hobby";
-   
-    padding: 5%;
     background-color: rgb(188, 211, 255);
     text-align: center;
     border: 10px solid rgb(253, 253, 253);
@@ -190,6 +184,7 @@ height: auto;
   }
 
   .hobby {
+    width: 100%;
     grid-area: hobby;
     height: auto;
     background-color: rgb(98, 107, 241);
@@ -201,17 +196,19 @@ height: auto;
       "juegos "
       "Peliculas";
     grid-template-rows: auto;
+    grid-template-columns: 100%;
         border: 10px solid rgb(0, 0, 0);
         font-size: 100%;
         
   }
+  
 
   .musica {
     grid-area: musica;
     display: grid;
     height: auto;
     background-color: rgb(249, 249, 249);
-    gap: 20px;
+    gap: 10px;
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
@@ -222,7 +219,9 @@ height: auto;
   }
 
   .musica img {
-    width: 100%;
+      width:20%;
+      height: auto;
+
     border-radius: 10px;
     border: 10px solid rgb(1, 23, 82);
   }
@@ -248,7 +247,8 @@ height: auto;
   }
 
   .juegos img {
-    width: 100%;
+    width: 20%;
+    height: auto;
     border-radius: 10px;
     border: 10px solid rgb(180, 187, 193);
   }
@@ -302,33 +302,42 @@ height: auto;
 
   hr {
     height: 10px;
-
     background-color: rgba(54, 8, 83, 0.662);
     border: none;
     margin: 20px 0;
   }
 
-  .Trabajos {
-    grid-area: Trabajos;
+  .trabajos {
+    grid-area: trabajos;
     display: grid;
     width: 100%;
     height: auto;
     grid-template-areas:
-      "trabajo"
-      "trabajo";
+    "trabajo trabajo2";
+      grid-template-columns: 50%;
     gap: 1%;
     padding: 5%;
     background-color: #ffffff;
     text-align: center;
+   align-items: center;
+   justify-content: center;
     border-radius: 10px;
     border: 5px solid rgb(0, 0, 0);
-  }
-
-  .Trabajos {
     color: #004d99;
   }
 
+
   .trabajo {
+    grid-area: trabajo;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    
+  }
+  .trabajo2 {
+    grid-area: trabajo2;
     height: auto;
     margin-bottom: 30px;
     border-radius: 10px;
@@ -338,9 +347,14 @@ height: auto;
   }
 
   .trabajo img {
-    width: 100%;
+    width: 50%;
     border-radius: 10px;
   }
+  .trabajo2 img {
+    width: 50%;
+    border-radius: 10px;
+  }
+
 
   .trabajo p {
     margin: 10px 0;
@@ -358,6 +372,24 @@ height: auto;
   }
 
   .trabajo a:hover {
+    text-decoration: underline;
+  }
+  .trabajo2 p {
+    margin: 10px 0;
+    text-align: centers;
+    background-color: white;
+    padding: 3px;
+  }
+
+  .trabajo2 a {
+    background-color: #06005f;
+    color: white;
+    float: right;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  .trabajo2 a:hover {
     text-decoration: underline;
   }
 
@@ -384,7 +416,9 @@ height: auto;
 justify-content: center;
 
   }
-
+.footer img{
+height: 10%;
+}
   .Fcontainer {
     grid-area: Fcontainer;
     display: grid;
@@ -412,13 +446,14 @@ justify-content: center;
   }
 
   .redesIcons {
+    width: 20%;
     margin: 0 10px;
     display: inline-block;
   }
 
   .redesIcons img {
-    width: 15%;
-    height: 15%;
+    width: 25%;
+    height: 25%;
   }
 
   .navegacion {
@@ -458,20 +493,21 @@ justify-content: center;
   body {
     background-color: rgba(245, 52, 52, 0);
     display: grid;
-    min-width: 100vw;
-    height: 10vh auto;
+    min-width: 100%;
+    height: auto;
     grid-template-areas:
-    "menu"
+      "menu"
       "container"
       "padre1"
       "HOBBIES"
-      "Trabajos"
+      "trabajos"
       "mensaje"
       "footer";
-    grid-template-rows: auto;
+    grid-template-rows: 10vh auto;
     grid-template-columns: 100%;
     justify-content: center;
   }
+
 
   .padre1 {
     grid-area: padre1;
@@ -500,9 +536,6 @@ justify-content: center;
     grid-template-areas:
       "titulo"
       "descripcion";
-    
-    
-    
   }
 
   .titulo {
@@ -582,7 +615,7 @@ justify-content: center;
   }
 
   #imgm {
-    width: 15%;
+    width: 5%;
     height: auto;
   }
 
@@ -625,7 +658,8 @@ height: auto;
     display: grid;
     height: auto;
     grid-template-areas:
-      "hobby"
+  
+    "hobby"
       "hobby";
    
     padding: 5%;
@@ -755,27 +789,29 @@ height: auto;
     margin: 20px 0;
   }
 
-  .Trabajos {
-    grid-area: Trabajos;
+  .trabajos {
+    grid-area: trabajos;
     display: grid;
     width: 100%;
     height: auto;
     grid-template-areas:
       "trabajo"
-      "trabajo";
+      "trabajo2";
+      grid-template-columns: 100%;
     gap: 1%;
     padding: 5%;
     background-color: #ffffff;
     text-align: center;
     border-radius: 10px;
     border: 5px solid rgb(0, 0, 0);
-  }
-
-  .Trabajos {
     color: #004d99;
   }
-
+  .trabajoS{
+    color: #004d99;
+  }
   .trabajo {
+    grid-area: trabajo;
+    width: 100%;
     height: auto;
     margin-bottom: 30px;
     border-radius: 10px;
@@ -783,12 +819,24 @@ height: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     
   }
-
+  .trabajo2 {
+    grid-area: trabajo2;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    
+  }
   .trabajo img {
     width: 100%;
     border-radius: 10px;
   }
-
+  .trabajo2 img {
+    width: 100%;
+    border-radius: 10px;
+  }
   .trabajo p {
     margin: 10px 0;
     text-align: centers;
@@ -805,6 +853,24 @@ height: auto;
   }
 
   .trabajo a:hover {
+    text-decoration: underline;
+  }
+  .trabajO2 p {
+    margin: 10px 0;
+    text-align: centers;
+    background-color: white;
+    padding: 3px;
+  }
+
+  .trabajo2 a {
+    background-color: #06005f;
+    color: white;
+    float: right;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  .trabajo2 a:hover {
     text-decoration: underline;
   }
 
@@ -864,8 +930,8 @@ justify-content: center;
   }
 
   .redesIcons img {
-    width: 15%;
-    height: 15%;
+    width: 20%;
+    height: 20%;
   }
 
   .navegacion {
@@ -902,24 +968,25 @@ justify-content: center;
   }
 }
 
-
 @media(max-width:413px) {
   body {
     background-color: rgba(245, 52, 52, 0);
     display: grid;
-    min-width: 100vw;
+    min-width: 100%;
     height: auto;
     grid-template-areas:
+      "menu"
       "container"
       "padre1"
       "HOBBIES"
-      "Trabajos"
+      "trabajos"
       "mensaje"
       "footer";
-    grid-template-rows: auto;
+    grid-template-rows: 10vh auto;
     grid-template-columns: 100%;
     justify-content: center;
   }
+
 
   .padre1 {
     grid-area: padre1;
@@ -948,9 +1015,6 @@ justify-content: center;
     grid-template-areas:
       "titulo"
       "descripcion";
-    
-    
-    
   }
 
   .titulo {
@@ -1031,7 +1095,7 @@ justify-content: center;
   }
 
   #imgm {
-    width: 15%;
+    width: 20%;
     height:10vh;
   }
 
@@ -1199,33 +1263,31 @@ height: auto;
 
   hr {
     height: 10px;
-
     background-color: rgba(54, 8, 83, 0.662);
     border: none;
     margin: 20px 0;
   }
 
-  .Trabajos {
-    grid-area: Trabajos;
+  .trabajos {
+    grid-area: trabajos;
     display: grid;
     width: 100%;
     height: auto;
     grid-template-areas:
       "trabajo"
-      "trabajo";
+      "trabajo2";
     gap: 1%;
     padding: 5%;
     background-color: #ffffff;
     text-align: center;
     border-radius: 10px;
     border: 5px solid rgb(0, 0, 0);
-  }
-
-  .Trabajos {
     color: #004d99;
   }
 
   .trabajo {
+    grid-area: trabajo;
+    width: 100%;
     height: auto;
     margin-bottom: 30px;
     border-radius: 10px;
@@ -1233,12 +1295,24 @@ height: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     
   }
-
+  .trabajo2 {
+    grid-area: trabajo2;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    
+  }
   .trabajo img {
     width: 100%;
     border-radius: 10px;
   }
-
+  .trabajo2 img {
+    width: 100%;
+    border-radius: 10px;
+  }
   .trabajo p {
     margin: 10px 0;
     text-align: centers;
@@ -1257,7 +1331,24 @@ height: auto;
   .trabajo a:hover {
     text-decoration: underline;
   }
+  .trabajo2 p {
+    margin: 10px 0;
+    text-align: centers;
+    background-color: white;
+    padding: 3px;
+  }
 
+  .trabajo2 a {
+    background-color: #06005f;
+    color: white;
+    float: right;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  .trabajo2 a:hover {
+    text-decoration: underline;
+  }
   .mensaje {
     grid-area: mensaje;
     width: 100%;
@@ -1314,8 +1405,8 @@ justify-content: center;
   }
 
   .redesIcons img {
-    width: 15%;
-    height: 15%;
+    width:25%;
+    height: 25%;
   }
 
   .navegacion {
